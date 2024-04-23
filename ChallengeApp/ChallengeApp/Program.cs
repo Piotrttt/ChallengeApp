@@ -1,5 +1,4 @@
 ﻿// praca domowa dzień 4
-using System.Security.Cryptography;
 
 var name = "Joanna";
 var age = 42;
