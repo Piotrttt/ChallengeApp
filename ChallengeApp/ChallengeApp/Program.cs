@@ -1,18 +1,31 @@
-﻿// praca domowa dzień 4
+﻿// "Mężczyzna w wieku 20 lat"
+// "Mężczyzna w wieku poniżej 50 lat o imiemiu Paweł"
+// "Niepełnoloetnia osoba"
+// "Ewa lub Aneta"
 
-var name = "Joanna";
-var age = 42;
-var sex = "female";
+Console.WriteLine("Napisz płeć:");
+var sex  = Console.ReadLine();
 
-if (sex == "female" && age < 30)
+Console.WriteLine("Napisz imię:");
+var name  = Console.ReadLine();
+
+Console.WriteLine("Napisz wiek:");
+var ageAsString = Console.ReadLine();
+var age = int.Parse(ageAsString);
+
+if (sex == "m" && age == 20)
 {
-    Console.WriteLine("Kobieta poniżej 30 lat");
+    Console.WriteLine("Mężczyzna w wieku 20 lat");
 }
-else if (name == "Ewa" && age == 30)
+else if (sex == "m" && age < 50 && name == "Paweł")
 {
-    Console.WriteLine("Ewa, 30 lat");
+    Console.WriteLine("Mężczyzna w wieku poniżej 50 lat o imiemiu Paweł");
 }
-else if (sex == "male" && age < 18)
+else if (age < 18)
 {
-    Console.WriteLine("Niepełnoletni mężczyzna");
+    Console.WriteLine("Niepełnoloetnia osoba");
+}
+else if (name == "Ewa" || name == "Aneta")
+{
+    Console.WriteLine("Ewa lub Aneta");
 }
